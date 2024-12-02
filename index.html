@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aimeecode Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Custom animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .slide-up {
+      animation: slideUp 1.5s ease-out;
+    }
+
+    @keyframes bounceIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    .bounce-in {
+      animation: bounceIn 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <div class="fade-in">
+        <i class="fas fa-code text-5xl mb-4"></i>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+          Welcome to <span class="text-yellow-300">Aimeecode Studio</span>
+        </h1>
+        <p class="text-lg md:text-xl mb-6">
+          Where creativity meets technology — Invitations, Logos, Websites, Mobile Apps, and Programming Education.
+        </p>
+        <a href="#services" class="px-6 py-3 bg-yellow-300 text-gray-900 font-bold rounded-lg shadow-md text-lg hover:bg-yellow-200 transition">
+          Explore Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800 fade-in">
+        <i class="fas fa-cogs mr-2"></i>What We Offer
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service Item -->
+        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
+          <i class="fas fa-envelope text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Invitations</h3>
+          <p class="text-sm text-gray-600">Customized designs for every event.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
+          <i class="fas fa-paint-brush text-4xl text-purple-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Logos</h3>
+          <p class="text-sm text-gray-600">Unique logos tailored to your brand.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
+          <i class="fas fa-laptop-code text-4xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Websites</h3>
+          <p class="text-sm text-gray-600">Responsive websites for your business.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
+          <i class="fas fa-mobile-alt text-4xl text-red-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Mobile Apps</h3>
+          <p class="text-sm text-gray-600">Innovative apps for all platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Stunning Section -->
+  <section class="py-20 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-white">
+    <div class="container mx-auto text-center px-6">
+      <div class="fade-in">
+        <i class="fas fa-lightbulb text-5xl mb-4"></i>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Unlock Your Creativity
+        </h2>
+        <p class="text-lg md:text-xl mb-8">
+          At Aimeecode Studio, we turn your ideas into reality with cutting-edge designs and technologies.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white text-gray-800 rounded-lg shadow-lg bounce-in">
+          <i class="fas fa-check-circle text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Why Choose Us?</h3>
+          <p>We deliver innovative solutions, combining creativity and technology to exceed your expectations.</p>
+        </div>
+        <div class="p-6 bg-white text-gray-800 rounded-lg shadow-lg bounce-in">
+          <i class="fas fa-users text-4xl text-green-500 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Join Our Community</h3>
+          <p>Collaborate with us to bring your vision to life and stay ahead in the digital world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm mb-4">&copy; 2024 Aimeecode Studio. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="https://facebook.com" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/250791789685" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
