@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aimeecode Studio</title>
+  <title>Aimeecode Studio - Complete Digital Solutions</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
@@ -47,53 +47,168 @@
     .bounce-in {
       animation: bounceIn 1.5s ease-in-out;
     }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .plan-card {
+      transition: all 0.3s ease;
+    }
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    /* Custom gradient classes */
+    .gradient-hero {
+      background: linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+    }
+    
+    .gradient-nav {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d3748 100%);
+    }
+    
+    .gradient-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #e94560 100%);
+    }
+    
+    .gradient-accent {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2d3748 50%, #4a5568 75%, #718096 100%);
+    }
+    
+    .gradient-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #f1f5f9 50%, #e2e8f0 75%, #cbd5e1 100%);
+    }
+    
+    .gradient-footer {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d3748 100%);
+    }
+    
+    .gradient-services {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #cbd5e1 50%, #94a3b8 75%, #64748b 100%);
+    }
+    
+    .gradient-contact {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 25%, #cbd5e1 50%, #94a3b8 75%, #64748b 100%);
+    }
   </style>
 </head>
 <body class="text-gray-800 font-sans">
 
+  <!-- Navigation -->
+  <nav class="gradient-nav text-white py-4 sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fas fa-code text-2xl mr-2 text-yellow-400"></i>
+        <span class="text-xl font-bold">Aimeecode Studio</span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a>
+        <a href="#services" class="hover:text-yellow-400 transition duration-300">Services</a>
+        <a href="#hosting" class="hover:text-yellow-400 transition duration-300">Hosting</a>
+        <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+        <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-20">
-    <div class="container mx-auto text-center px-6">
+  <section id="home" class="gradient-hero text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80" alt="Creative workspace" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none" style="z-index:0;"/>
+    <div class="container mx-auto text-center px-6 relative z-10">
       <div class="fade-in">
-        <i class="fas fa-code text-5xl mb-4"></i>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
-          Welcome to <span class="text-yellow-300">Aimeecode Studio</span>
+        <i class="fas fa-code text-5xl mb-4 float text-yellow-400"></i>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+          Welcome to <span class="text-yellow-400">Aimeecode Studio</span>
         </h1>
-        <p class="text-lg md:text-xl mb-6">
-          Where creativity meets technology — Invitations, Logos, Websites, Mobile Apps, and Programming Education.
+        <p class="text-lg md:text-xl mb-6 max-w-3xl mx-auto">
+          Your complete digital partner in Kigali — From stunning invitations and logos to powerful websites, mobile apps, and reliable web hosting solutions.
         </p>
-        <a href="#services" class="px-6 py-3 bg-yellow-300 text-gray-900 font-bold rounded-lg shadow-md text-lg hover:bg-yellow-200 transition">
-          Explore Our Services
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#services" class="px-6 py-3 bg-yellow-400 text-gray-900 font-bold rounded-lg shadow-lg text-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+            Explore Our Services
+          </a>
+          <a href="#hosting" class="px-6 py-3 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg text-lg hover:bg-yellow-400 hover:text-gray-900 transition duration-300 transform hover:scale-105">
+            View Hosting Plans
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 gradient-accent text-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center fade-in">
+        <i class="fas fa-question-circle mr-2 text-yellow-400"></i>Frequently Asked Questions
+      </h2>
+      <div class="max-w-2xl mx-auto">
+        <div class="mb-4">
+          <button onclick="toggleFaq(1)" class="w-full text-left bg-gray-900 bg-opacity-40 px-4 py-3 rounded-t-lg font-semibold focus:outline-none">What services do you offer?</button>
+          <div id="faq1" class="hidden bg-gray-800 bg-opacity-60 px-4 py-3 rounded-b-lg">We offer invitations, logo design, website development, mobile apps, and web hosting.</div>
+        </div>
+        <div class="mb-4">
+          <button onclick="toggleFaq(2)" class="w-full text-left bg-gray-900 bg-opacity-40 px-4 py-3 rounded-t-lg font-semibold focus:outline-none">How long does it take to build a website?</button>
+          <div id="faq2" class="hidden bg-gray-800 bg-opacity-60 px-4 py-3 rounded-b-lg">Most websites are completed in a month or 3-4 days, depending on requirements.</div>
+        </div>
+        <div class="mb-4">
+          <button onclick="toggleFaq(3)" class="w-full text-left bg-gray-900 bg-opacity-40 px-4 py-3 rounded-t-lg font-semibold focus:outline-none">Do you provide support after launch?</button>
+          <div id="faq3" class="hidden bg-gray-800 bg-opacity-60 px-4 py-3 rounded-b-lg">Yes! We offer ongoing support and maintenance for all our clients.</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleFaq(num) {
+        const el = document.getElementById('faq' + num);
+        el.classList.toggle('hidden');
+      }
+    </script>
+  </section>
+
+  <!-- Newsletter Signup Section -->
+  <section id="newsletter" class="py-16 gradient-section text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6 fade-in">
+        <i class="fas fa-envelope-open-text mr-2 text-yellow-400"></i>Stay Updated!
+      </h2>
+      <p class="mb-6 text-lg">Subscribe to our newsletter for the latest news, offers, and digital tips.</p>
+      <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" required placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none"/>
+        <button type="submit" class="px-6 py-3 bg-yellow-400 text-gray-900 font-bold rounded-lg shadow-lg text-lg hover:bg-yellow-300 transition duration-300">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <!-- Services Section -->
-  <section id="services" class="py-16 bg-gray-100">
+  <section id="services" class="py-16 gradient-services">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-8 text-gray-800 fade-in">
-        <i class="fas fa-cogs mr-2"></i>What We Offer
+        <i class="fas fa-cogs mr-2 text-yellow-600"></i>What We Offer
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Service Item -->
-        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
-          <i class="fas fa-envelope text-4xl text-blue-500 mb-4"></i>
+        <div class="p-6 gradient-card rounded-lg shadow-lg slide-up plan-card border border-gray-200">
+          <i class="fas fa-envelope text-4xl text-blue-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Invitations</h3>
           <p class="text-sm text-gray-600">Customized designs for every event.</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
-          <i class="fas fa-paint-brush text-4xl text-purple-500 mb-4"></i>
+        <div class="p-6 gradient-card rounded-lg shadow-lg slide-up plan-card border border-gray-200">
+          <i class="fas fa-paint-brush text-4xl text-purple-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Logos</h3>
           <p class="text-sm text-gray-600">Unique logos tailored to your brand.</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
-          <i class="fas fa-laptop-code text-4xl text-green-500 mb-4"></i>
+        <div class="p-6 gradient-card rounded-lg shadow-lg slide-up plan-card border border-gray-200">
+          <i class="fas fa-laptop-code text-4xl text-green-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Websites</h3>
           <p class="text-sm text-gray-600">Responsive websites for your business.</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg slide-up">
-          <i class="fas fa-mobile-alt text-4xl text-red-500 mb-4"></i>
+        <div class="p-6 gradient-card rounded-lg shadow-lg slide-up plan-card border border-gray-200">
+          <i class="fas fa-mobile-alt text-4xl text-red-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Mobile Apps</h3>
           <p class="text-sm text-gray-600">Innovative apps for all platforms.</p>
         </div>
@@ -101,42 +216,183 @@
     </div>
   </section>
 
-  <!-- New Stunning Section -->
-  <section class="py-20 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-white">
-    <div class="container mx-auto text-center px-6">
-      <div class="fade-in">
-        <i class="fas fa-lightbulb text-5xl mb-4"></i>
+  <!-- Hosting Plans Section -->
+  <section id="hosting" class="gradient-section text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <div class="fade-in mb-12">
+        <i class="fas fa-server text-5xl mb-4 text-yellow-400"></i>
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Unlock Your Creativity
+          Web Hosting Solutions
         </h2>
-        <p class="text-lg md:text-xl mb-8">
-          At Aimeecode Studio, we turn your ideas into reality with cutting-edge designs and technologies.
+        <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          Affordable & reliable web hosting in Kigali. Choose the perfect plan for your website needs.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Mini Plan -->
+        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Mini Plan</h3>
+          <div class="text-3xl font-bold text-green-600 mb-6">RWF39,000<span class="text-sm text-gray-600">/Year</span></div>
+          <ul class="text-left space-y-2 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>10GB SSD Storage</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>1TB Bandwidth</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>1 Website</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>3 Subdomains</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>3 Email Accounts</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Free SSL Certificates</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Cpanel</li>
+          </ul>
+          <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">Choose Plan</button>
+        </div>
+
+        <!-- Starter Plan -->
+        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
+          <h3 class="text-2xl font-bold text-purple-600 mb-4">Starter Plan</h3>
+          <div class="text-3xl font-bold text-green-600 mb-6">RWF49,000<span class="text-sm text-gray-600">/Year</span></div>
+          <ul class="text-left space-y-2 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>20GB SSD Storage</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>2TB Bandwidth</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>3 Websites</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>6 Subdomains</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>6 Email Accounts</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Free SSL Certificates</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Free Site Migration</li>
+          </ul>
+          <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-300">Choose Plan</button>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
+          <h3 class="text-2xl font-bold text-green-600 mb-4">Growth Plan</h3>
+          <div class="text-3xl font-bold text-green-600 mb-6">RWF55,000<span class="text-sm text-gray-600">/Year</span></div>
+          <ul class="text-left space-y-2 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>40GB SSD Storage</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>5TB Bandwidth</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>10 Websites</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Subdomains</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>10 Email Accounts</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Databases</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>CloudFlare CDN</li>
+          </ul>
+          <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-300">Choose Plan</button>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
+          <h3 class="text-2xl font-bold text-red-600 mb-4">Business Plan</h3>
+          <div class="text-3xl font-bold text-green-600 mb-6">RWF70,000<span class="text-sm text-gray-600">/Year</span></div>
+          <ul class="text-left space-y-2 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>50GB SSD Storage</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>10TB Bandwidth</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>20 Websites</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Subdomains</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>MailChannels Business Email</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Email Accounts</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Powerful SEO Tools</li>
+          </ul>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition duration-300">Choose Plan</button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
+          <h3 class="text-2xl font-bold text-indigo-600 mb-4">Enterprise Plan</h3>
+          <div class="text-3xl font-bold text-green-600 mb-6">RWF90,000<span class="text-sm text-gray-600">/Year</span></div>
+          <ul class="text-left space-y-2 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>70GB SSD Storage</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Bandwidth</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Websites</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Free Domain</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>MailChannels Business Email</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Email & Databases</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Powerful SEO Tools</li>
+          </ul>
+          <button class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Choose Plan</button>
+        </div>
+
+        <!-- Unlimited Plan -->
+        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
+          <h3 class="text-2xl font-bold text-yellow-600 mb-4">Unlimited Plan</h3>
+          <div class="text-3xl font-bold text-green-600 mb-6">RWF120,000<span class="text-sm text-gray-600">/Year</span></div>
+          <ul class="text-left space-y-2 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited SSD Storage</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Bandwidth</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Websites</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Free Domain</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>MailChannels Business Email</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Email & Databases</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Powerful SEO Tools</li>
+          </ul>
+          <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition duration-300">Choose Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 gradient-accent text-white">
+    <div class="container mx-auto px-6 text-center">
+      <div class="fade-in">
+        <i class="fas fa-lightbulb text-5xl mb-4 text-yellow-400"></i>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          About Aimeecode Studio
+        </h2>
+        <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          We are a passionate team of creative professionals dedicated to transforming your digital dreams into reality. Based in Kigali, we serve clients worldwide with innovative solutions.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         <div class="p-6 bg-white text-gray-800 rounded-lg shadow-lg bounce-in">
-          <i class="fas fa-check-circle text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-2xl font-semibold mb-4">Why Choose Us?</h3>
-          <p>We deliver innovative solutions, combining creativity and technology to exceed your expectations.</p>
+          <i class="fas fa-rocket text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Innovation</h3>
+          <p>We stay ahead of the curve with cutting-edge technologies and creative solutions.</p>
         </div>
         <div class="p-6 bg-white text-gray-800 rounded-lg shadow-lg bounce-in">
-          <i class="fas fa-users text-4xl text-green-500 mb-4"></i>
-          <h3 class="text-2xl font-semibold mb-4">Join Our Community</h3>
-          <p>Collaborate with us to bring your vision to life and stay ahead in the digital world.</p>
+          <i class="fas fa-heart text-4xl text-red-600 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Passion</h3>
+          <p>Every project is crafted with love and attention to detail, ensuring excellence.</p>
+        </div>
+        <div class="p-6 bg-white text-gray-800 rounded-lg shadow-lg bounce-in">
+          <i class="fas fa-users text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Community</h3>
+          <p>We build lasting relationships with our clients and grow together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 gradient-contact">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800 fade-in">
+        <i class="fas fa-envelope mr-2 text-yellow-600"></i>Get In Touch
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="p-6 gradient-card rounded-lg shadow-lg slide-up">
+          <i class="fas fa-map-marker-alt text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Location</h3>
+          <p class="text-gray-600">Kigali, Rwanda</p>
+          <p class="text-gray-600">Serving clients worldwide</p>
+        </div>
+        <div class="p-6 gradient-card rounded-lg shadow-lg slide-up">
+          <i class="fas fa-phone text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Contact</h3>
+          <p class="text-gray-600">WhatsApp: +250 791 789 685</p>
+          <p class="text-gray-600">Email: info@aimeecode.com</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-8">
+  <footer class="gradient-footer text-white py-8">
     <div class="container mx-auto px-6 text-center">
       <p class="text-sm mb-4">&copy; 2024 Aimeecode Studio. All rights reserved.</p>
       <div class="mt-4 flex justify-center space-x-6">
-        <a href="https://facebook.com" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
-        <a href="https://wa.me/250791789685" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" class="text-2xl hover:text-yellow-400 transition duration-300"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-2xl hover:text-yellow-400 transition duration-300"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="text-2xl hover:text-yellow-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/250791789685" target="_blank" class="text-2xl hover:text-yellow-400 transition duration-300"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </footer>
