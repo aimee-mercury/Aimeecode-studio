@@ -227,13 +227,25 @@
         <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
           Affordable & reliable web hosting in Kigali. Choose the perfect plan for your website needs.
         </p>
+        
+        <!-- Currency Toggle -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+          <span class="text-lg font-semibold">Currency:</span>
+          <button id="currencyToggle" class="px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded-lg hover:bg-yellow-300 transition duration-300">
+            USD
+          </button>
+        </div>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Mini Plan -->
         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
           <h3 class="text-2xl font-bold text-blue-600 mb-4">Mini Plan</h3>
-          <div class="text-3xl font-bold text-green-600 mb-6">RWF39,000<span class="text-sm text-gray-600">/Year</span></div>
+          <div class="text-3xl font-bold text-green-600 mb-6">
+            <span class="usd-price">$39</span>
+            <span class="rwf-price hidden">RWF 39,000</span>
+            <span class="text-sm text-gray-600">/Year</span>
+          </div>
           <ul class="text-left space-y-2 mb-6">
             <li><i class="fas fa-check text-green-500 mr-2"></i>10GB SSD Storage</li>
             <li><i class="fas fa-check text-green-500 mr-2"></i>1TB Bandwidth</li>
@@ -249,7 +261,11 @@
         <!-- Starter Plan -->
         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
           <h3 class="text-2xl font-bold text-purple-600 mb-4">Starter Plan</h3>
-          <div class="text-3xl font-bold text-green-600 mb-6">RWF49,000<span class="text-sm text-gray-600">/Year</span></div>
+          <div class="text-3xl font-bold text-green-600 mb-6">
+            <span class="usd-price">$49</span>
+            <span class="rwf-price hidden">RWF 49,000</span>
+            <span class="text-sm text-gray-600">/Year</span>
+          </div>
           <ul class="text-left space-y-2 mb-6">
             <li><i class="fas fa-check text-green-500 mr-2"></i>20GB SSD Storage</li>
             <li><i class="fas fa-check text-green-500 mr-2"></i>2TB Bandwidth</li>
@@ -265,7 +281,11 @@
         <!-- Growth Plan -->
         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
           <h3 class="text-2xl font-bold text-green-600 mb-4">Growth Plan</h3>
-          <div class="text-3xl font-bold text-green-600 mb-6">RWF55,000<span class="text-sm text-gray-600">/Year</span></div>
+          <div class="text-3xl font-bold text-green-600 mb-6">
+            <span class="usd-price">$55</span>
+            <span class="rwf-price hidden">RWF 55,000</span>
+            <span class="text-sm text-gray-600">/Year</span>
+          </div>
           <ul class="text-left space-y-2 mb-6">
             <li><i class="fas fa-check text-green-500 mr-2"></i>40GB SSD Storage</li>
             <li><i class="fas fa-check text-green-500 mr-2"></i>5TB Bandwidth</li>
@@ -281,7 +301,11 @@
         <!-- Business Plan -->
         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
           <h3 class="text-2xl font-bold text-red-600 mb-4">Business Plan</h3>
-          <div class="text-3xl font-bold text-green-600 mb-6">RWF70,000<span class="text-sm text-gray-600">/Year</span></div>
+          <div class="text-3xl font-bold text-green-600 mb-6">
+            <span class="usd-price">$70</span>
+            <span class="rwf-price hidden">RWF 70,000</span>
+            <span class="text-sm text-gray-600">/Year</span>
+          </div>
           <ul class="text-left space-y-2 mb-6">
             <li><i class="fas fa-check text-green-500 mr-2"></i>50GB SSD Storage</li>
             <li><i class="fas fa-check text-green-500 mr-2"></i>10TB Bandwidth</li>
@@ -297,7 +321,11 @@
         <!-- Enterprise Plan -->
         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
           <h3 class="text-2xl font-bold text-indigo-600 mb-4">Enterprise Plan</h3>
-          <div class="text-3xl font-bold text-green-600 mb-6">RWF90,000<span class="text-sm text-gray-600">/Year</span></div>
+          <div class="text-3xl font-bold text-green-600 mb-6">
+            <span class="usd-price">$90</span>
+            <span class="rwf-price hidden">RWF 90,000</span>
+            <span class="text-sm text-gray-600">/Year</span>
+          </div>
           <ul class="text-left space-y-2 mb-6">
             <li><i class="fas fa-check text-green-500 mr-2"></i>70GB SSD Storage</li>
             <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Bandwidth</li>
@@ -313,7 +341,11 @@
         <!-- Unlimited Plan -->
         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 plan-card border border-gray-200 bounce-in">
           <h3 class="text-2xl font-bold text-yellow-600 mb-4">Unlimited Plan</h3>
-          <div class="text-3xl font-bold text-green-600 mb-6">RWF120,000<span class="text-sm text-gray-600">/Year</span></div>
+          <div class="text-3xl font-bold text-green-600 mb-6">
+            <span class="usd-price">$120</span>
+            <span class="rwf-price hidden">RWF 120,000</span>
+            <span class="text-sm text-gray-600">/Year</span>
+          </div>
           <ul class="text-left space-y-2 mb-6">
             <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited SSD Storage</li>
             <li><i class="fas fa-check text-green-500 mr-2"></i>Unlimited Bandwidth</li>
@@ -327,6 +359,31 @@
         </div>
       </div>
     </div>
+    
+    <!-- Currency Toggle Script -->
+    <script>
+      document.getElementById('currencyToggle').addEventListener('click', function() {
+        const button = this;
+        const usdPrices = document.querySelectorAll('.usd-price');
+        const rwfPrices = document.querySelectorAll('.rwf-price');
+        
+        if (button.textContent === 'USD') {
+          // Switch to RWF
+          usdPrices.forEach(price => price.classList.add('hidden'));
+          rwfPrices.forEach(price => price.classList.remove('hidden'));
+          button.textContent = 'RWF';
+          button.classList.remove('bg-yellow-400', 'text-gray-900');
+          button.classList.add('bg-green-400', 'text-white');
+        } else {
+          // Switch to USD
+          usdPrices.forEach(price => price.classList.remove('hidden'));
+          rwfPrices.forEach(price => price.classList.add('hidden'));
+          button.textContent = 'USD';
+          button.classList.remove('bg-green-400', 'text-white');
+          button.classList.add('bg-yellow-400', 'text-gray-900');
+        }
+      });
+    </script>
   </section>
 
   <!-- About Section -->
